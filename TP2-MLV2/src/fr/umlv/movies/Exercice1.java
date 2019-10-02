@@ -29,6 +29,8 @@ public class Exercice1 {
 	public static void main(String[] args) throws IOException {
 		
 		var path = Path.of("data/movies.txt");
+		
+		
 		/*
 		Stream<String> st = Files.lines(path);
 		
@@ -48,9 +50,13 @@ public class Exercice1 {
 			st.close();
 		}
 		*/
+		
+		
 		try(Stream<String> st = Files.lines(path)){
 			st.forEach(System.out::println);
 		}
+		
+		
 	
 	}
 	

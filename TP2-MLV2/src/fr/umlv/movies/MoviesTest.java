@@ -37,10 +37,10 @@ public class MoviesTest {
 		assertEquals(170509, numberOfUniqueActors);
 	}
 
-	/*
+	
 	@Test
 	public void numberOfMoviesByActor() throws IOException {
-		var path = Path.of("movies.txt");
+		var path = Path.of("data/movies.txt");
 		var actorsByMovie = Movies.actorsByMovie(path);
 		var numberOfMoviesByActor = Movies.numberOfMoviesByActor(actorsByMovie);
 		
@@ -55,9 +55,10 @@ public class MoviesTest {
 	}
 	
 	
+	/*
 	@Test
 	public void actorInMostMovies() throws IOException {
-		var path = Path.of("movies.txt");
+		var path = Path.of("data/movies.txt");
 		var actorsByMovie = Movies.actorsByMovie(path);
 		var numberOfMoviesByActor = Movies.numberOfMoviesByActor(actorsByMovie);
 		var actorInMostMovies = Movies.actorInMostMovies(numberOfMoviesByActor).orElseThrow();

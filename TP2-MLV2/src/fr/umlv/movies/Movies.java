@@ -7,8 +7,10 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
 
 public class Movies {
 	public static void main(String[] args) throws IOException {
@@ -103,7 +105,6 @@ public class Movies {
 		}
 	}
 	/**
-	 * Nous allons utiliser l'interface Set<E> -> Collection
 	 * associates with a film list actors and returns the total number of different actors who 
 	 * starred in the films of the map
 	 * @param map
@@ -111,19 +112,26 @@ public class Movies {
 	 */
 	public  static long numberOfUniqueActors(Map<String, List<String>> map) {
 	
-		return map
-		.values()
+		return map.values()
 		.stream()
 		.flatMap(Collection::stream)
 		.distinct() 
 		.collect(Collectors.toList())
 		.size();
-		
 	}
 	
+	/**
+	 * displays the number of movies in which an actor played
+	 * @param map
+	 * @return Map<String, Long>
+	 */
+	public static Map<String, Long> numberOfMoviesByActor(Map<String, List<String>> map) {
+		
+		 return map.values()
+		 .stream()
+		 .flatMap(Collection::stream)
+		 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+	}
 	
-	
-	
-	
-	
+
 }
