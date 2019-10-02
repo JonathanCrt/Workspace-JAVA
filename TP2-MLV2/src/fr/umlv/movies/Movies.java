@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -25,7 +26,6 @@ public class Movies {
 		 * 
 		 */
 	}
-	
 	/**
 	 * 
 	 * @param path
@@ -57,7 +57,6 @@ public class Movies {
 		}
 		
 	}
-	
 	
 	/**
 	 * 
@@ -104,17 +103,21 @@ public class Movies {
 		}
 	}
 	/**
-	 * Nous allons utiliser l'interface Set<E>
-	 * 
+	 * Nous allons utiliser l'interface Set<E> -> Collection
+	 * associates with a film list actors and returns the total number of different actors who 
+	 * starred in the films of the map
 	 * @param map
-	 * @return
+	 * @return long
 	 */
 	public  static long numberOfUniqueActors(Map<String, List<String>> map) {
-		
 	
-		
-		map.entrySet().stream().map( (mapper)      ));
-		return 0;
+		return map
+		.values()
+		.stream()
+		.flatMap(Collection::stream)
+		.distinct() 
+		.collect(Collectors.toList())
+		.size();
 		
 	}
 	

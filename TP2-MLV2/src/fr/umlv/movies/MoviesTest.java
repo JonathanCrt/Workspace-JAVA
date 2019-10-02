@@ -27,16 +27,17 @@ public class MoviesTest {
 		expectedMovies.forEach(entry -> assertEquals(entry.getValue(), actorsByMovie.get(entry.getKey())));
 	}
 	
-	/*
+	
 	@Test
 	public void numberOfUniqueActors() throws IOException {
-		var path = Path.of("movies.txt");
+		var path = Path.of("data/movies.txt");
 		var actorsByMovie = Movies.actorsByMovie(path);
 		var numberOfUniqueActors = Movies.numberOfUniqueActors(actorsByMovie);
 		
 		assertEquals(170509, numberOfUniqueActors);
 	}
 
+	/*
 	@Test
 	public void numberOfMoviesByActor() throws IOException {
 		var path = Path.of("movies.txt");
@@ -52,6 +53,7 @@ public class MoviesTest {
 					);
 		expectedActorCouples.forEach(entry -> assertEquals(entry.getValue(), numberOfMoviesByActor.get(entry.getKey())));
 	}
+	
 	
 	@Test
 	public void actorInMostMovies() throws IOException {
