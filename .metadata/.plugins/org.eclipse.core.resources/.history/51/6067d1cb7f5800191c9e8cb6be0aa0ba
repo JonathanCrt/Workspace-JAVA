@@ -1,0 +1,39 @@
+package tp4_mlv;
+
+
+public class Main {
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
+	}
+	
+	private int foo;
+	
+	public int getFoo() {
+		return foo;
+	}
+	
+	
+	public static void main(String[] args) {
+		System.out.println("Hello Eclipse");
+	}
+	
+	/**
+	 * 7) 
+	 * 		1. sysout + CTRL + Space dans un main  permet d'écrire rapidement  la méthode d'affichage System.out.println() (raccourci)
+	 * 		2. toStr + CTRL + Space  dans une classe permet d'auto générer une nouvelle méthode toString() à rédéfinir.(avec l'annotation override)
+	 * 		pour le compilateur.
+	 * 		3. 
+	 * 		4.
+	 * 		5.
+	 * 		6.
+	 * 		7.
+	 * 		8.
+	 * 		9.
+	 * 	    10.
+	 * 		11.
+	 */
+	
+}

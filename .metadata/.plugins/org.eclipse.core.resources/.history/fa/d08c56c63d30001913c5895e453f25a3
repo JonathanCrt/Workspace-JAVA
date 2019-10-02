@@ -1,0 +1,28 @@
+/* 
+ * Résultat temps d'éxécution programme en C : 
+ * real	0m0,357s
+ * user	0m0,114s
+ * sys	0m0,012s
+ */
+
+
+public class Pascal {
+	
+	public int pascal(int nBut, int pBut) {
+		int tab[] = {};
+		int i, n;
+		
+		tab[0] = 1;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+		for(n = 1; n <= )
+		
+		
+	}
+	
+}

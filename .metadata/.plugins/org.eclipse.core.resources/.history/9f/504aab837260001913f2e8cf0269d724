@@ -1,0 +1,18 @@
+package fr.umlv.fight;
+
+import java.util.Random;
+
+public class Fighter extends Robot {
+	
+	
+	
+	@Override
+	public String toString() {
+		return ("Fighter "  );
+	}
+	
+	
+	
+	
+	
+}

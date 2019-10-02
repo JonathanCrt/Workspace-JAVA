@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace\td1_concurrence"/>
+		<item value="D:\OneDrive\Travail\ESIPE\Angular&amp;SpringBoot\AnimGo\AnimGo_backEnd"/>
+		<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace\Projet Hanabi\Hanabi"/>
+		<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace\Hanabi-master.zip"/>
+		<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace\Hanabi-master"/>
+		<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace\Project\Hanabi"/>
+		<item value="C:\Users\jonat\Downloads\Project"/>
+		<item value="C:\Users\jonat\Desktop\ESIPE_INFO1_Project_Hanabi_CRETE_DINDANE.zip"/>
+		<item value="C:\Users\jonat\Downloads\Hanabi-75a8e5f7cea372729844ed3e561c81de5da6ec53.zip"/>
+		<item value="C:\Users\jonat\Downloads\Hanabi-a7b72f28c90fede669d7b14cf7a8ee1718d57181.zip"/>
+		<item value="C:\Users\jonat\Desktop\Hanabi-fcb26606021e4976b901243564aaf76df9cf02a9"/>
+		<item value="C:\Users\jonat\Desktop\Hanabi-38d0c3a95771ebafb897e9ac8961990cbc88741e"/>
+		<item value="C:\Users\jonat\Desktop\Project\Hanabi"/>
+		<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace\tp_note_2018"/>
+		<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace"/>
+		<item value="C:\Users\jonat\Downloads\CurvySnake.zip"/>
+		<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace\Hanabi-end\Hanabi"/>
+		<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace\Hanabi"/>
+		<item value="C:\Users\jonat\Desktop\ZEN5"/>
+		<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace\Projet\Hanabi"/>
+		<item value="C:\Users\jonat\Downloads\fr"/>
+		<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace\TP1-MLV"/>
+		<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace\TP4-MLV"/>
+		<item value="C:\Users\jonat\Desktop\faceCast\Test unitaire"/>
+		<item value="C:\www\nodejs\faceCast\testFaceCast"/>
+		<item value="D:\Eclipse\testFaceCast"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\OneDrive\Travail\ESIPE\JAVA\workspace"/>
+			<item value="D:\Eclipse\sio"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+			<item value="D:\Eclipse\fusioncsv.zip"/>
+		</list>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="658"/>
+		<item key="DIALOG_Y_ORIGIN" value="341"/>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="619"/>
+		<item key="DIALOG_Y_ORIGIN" value="94"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="645"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

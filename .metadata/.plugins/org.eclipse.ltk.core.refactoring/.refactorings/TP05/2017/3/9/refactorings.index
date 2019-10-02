@@ -1,0 +1,12 @@
+1488459071844	Move file
+1488477806754	Rename field 'nom'
+1488477836828	Rename field 'km'
+1488477848089	Rename field 'jour'
+1488478496676	Rename method 'kmEnplus'
+1488478545284	Rename method 'prixKmEnplus'
+1488478644243	Rename method 'montantLoca'
+1488478955738	Rename method 'prixKmSupplemantaires'
+1488480066538	Rename field 'nbjour'
+1488480079120	Rename field 'nbkm'
+1488480106703	Rename local variable 'nomClient'
+1488554303807	Delete element

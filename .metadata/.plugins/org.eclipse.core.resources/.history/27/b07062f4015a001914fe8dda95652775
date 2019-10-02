@@ -1,0 +1,100 @@
+package tp4_mlv;
+
+import java.util.Arrays;
+
+public class ArrayShoppingCartTest {
+	
+	/**
+	 * 1) Si on déclare le nombre maximum de livres dans  un champ statique ( static), 
+	 * 	celui-ci sera placé dans un espace mémoire commun à tous les objets de la classe ArrayShoppingCartTest. 
+	 *  Si un des objets modifie la valeur d’un champ statique (par exemple), tous les objets verront la valeur de ce champ modifiée.
+	 *  Il n'est donc pas intéressant d'utiliser un champ statique.
+	 *  Le nombre de livres dépend en effet du caddie.
+	 *  */
+	
+	
+	
+	final private  int nbMaxBook;
+	final private Book[] cart;
+	private int nbBooks;
+	
+	
+	public ArrayShoppingCartTest(int nbMaxBook) {
+		this.nbMaxBook = nbMaxBook;
+		this.cart = new Book[nbMaxBook];
+		this.nbBooks = 0;
+	}
+	
+	/**
+	 * 
+	 * @param bk
+	 */
+	public void add(Book bk) throws Exception {
+		
+		if(this.cart[this.nbMaxBook-1] != null || this.nbMaxBook == 0) {
+			System.out.println("Error : Shopping Cart is full");
+			throw  new  ArrayIndexOutOfBoundsException(); 
+		}
+		
+		this.cart[nbBooks] = bk;
+		nbBooks++;
+		
+		/*
+		while (this.cart[nbBooks] != null) {
+			cart[nbBooks] = bk;
+			nbBooks++;
+		}
+		*/
+	}
+	/**
+	 * 
+	 * @param nbBooks
+	 * @return nbBooks
+	 */
+	public int numberOfBooks(int nbBooks) {
+		return nbBooks;
+	}
+	
+	@Override
+	public String toString() {
+		
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Book bk = new Book("Harry Potter et l'école des sorciers", "J.K Rowling");
+		Book bk2 = new Book("Harry Potter et la chambre des secrets", "J.K Rowling");
+		Book bk3 = new Book("Harry Potter et le prisonnier d'A", "J.K Rowling");
+		
+		
+		ArrayShoppingCartTest Cad = new ArrayShoppingCartTest(2);
+		try {
+			
+		}
+		Cad.add(bk);
+		Cad.add(bk2);
+		Cad.add(bk3);
+		
+		/*
+		int i;
+		for(i = 0; i < Cad.cart.length; i++) {
+			System.out.println(Cad.cart[i]);
+		}
+		*/
+		
+		/* 2) Test pour nbLivre > nbMaxProducts ?
+		 * A première vue , l'Exception 
+		 * java.lang.ArrayIndexOutOfBoundsException 
+		 * est levée car on a dépassé la taille du tableau alloué
+		 * On doit tester ce cas précis afin d'ajouter un ou des livres dans le caddie.
+		 * 3) 
+		 *  */
+		
+		System.out.println(Arrays.toString(Cad.cart));
+		
+		
+	}
+}

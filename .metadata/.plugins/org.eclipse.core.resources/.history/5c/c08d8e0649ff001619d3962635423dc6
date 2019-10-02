@@ -1,0 +1,38 @@
+package tp4;
+
+public class TestPeople
+{
+
+
+     
+	public static void main(String[] args) 
+	{
+		People Variable= new People("Jonathan",19,163,60);
+      
+		System.out.println("Votre nom : "+Variable.getNom());
+		System.out.println(Variable.getNom());
+		
+		System.out.println(Variable.getAge());
+		
+		System.out.println(Variable.getTaille());
+		
+		System.out.println(Variable.getPoids());
+		
+		System.out.println("Votre IMC est de : ");
+		System.out.println(Variable.determineIMC());
+		
+		
+		System.out.println(Variable.isAdult());
+		
+		System.out.println("Votre Statut : ");
+		System.out.println(Variable.significationIMC());
+		
+		
+	
+			
+		
+		
+		
+	}
+	
+}

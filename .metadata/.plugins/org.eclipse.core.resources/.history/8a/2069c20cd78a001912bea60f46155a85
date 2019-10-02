@@ -1,0 +1,104 @@
+package fr.upem.tidy;
+
+
+public class Dresser {
+	
+	private final int nb_dressers;
+	private final Item[] drawers;
+	private int nbItems;
+
+
+	public int requirePositiveNBdressers(int nb_dressers) throws IllegalArgumentException {
+		if(nb_dressers  < 0) {
+			throw new IllegalArgumentException("nb dresser must be positive");
+		}
+		return nb_dressers;
+	}
+	
+	
+	/**
+	 * @param drawers
+	 */
+	public Dresser(int nb_dressers) {
+		super();
+		this.nb_dressers = this.requirePositiveNBdressers(nb_dressers);
+		this.drawers = new Item[nb_dressers];
+		this.nbItems = 0;
+	}
+	
+	/**
+	 * 
+	 * @param index
+	 * @param item
+	 * @throws NullPointerException
+	 */
+	public void store(int index, Item item) throws NullPointerException{
+	
+		if(item == null) {
+			throw new NullPointerException("item is null !");
+		}
+		
+		if(drawers[index-1] != null) {
+			throw new ArrayIndexOutOfBoundsException(); 
+		}
+		this.drawers[nbItems] = item;
+		nbItems++;
+		
+	}
+	/*
+	int i;
+	for(i = 0; i <this.cart.length; i++) {
+		if(cart[i] == bk) {
+			cart[i] = cart[numberOfBooks()-1];
+			cart[numberOfBooks()-1] = null;
+			nbBooks--;
+		}
+		// if elt is equal to the last book
+		if(cart[i] == cart[numberOfBooks()-1]) {
+			i--;
+		}
+	}
+	*/
+	
+	public Item remove(int index) {
+			
+	}
+	
+	
+	public int size() {
+		return this.nbItems;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		StringBuilder st = new StringBuilder();
+		st.append(size());
+		String space = System.getProperty("line.separator");
+		st.append(space);
+		for(int i = 0; i < this.size(); i++) {
+			st.append(drawers[i]);
+			st.append(space);
+		}
+		
+		return st.toString();
+	}
+	
+	
+	
+	
+	
+	
+	
+}

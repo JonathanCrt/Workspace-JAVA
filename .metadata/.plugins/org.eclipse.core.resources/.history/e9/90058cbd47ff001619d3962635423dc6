@@ -1,0 +1,110 @@
+package tp4;
+
+public class People {
+
+	/************************* Attributs ************************/
+		  private String nom;
+		  private int age;
+		  private double taille;
+		  private double poids;
+
+		 public People()
+		{
+		       
+		     //Le constructeur qui n'attend rien....
+
+		}  
+
+		//Sans oublier les paramétres nom age , taille et poids
+		  public People( String nom, int age, double taille, double poids)
+		     {
+		       this.nom = nom;
+		       this.age = age;
+		       this.taille = taille;
+		       this.poids = poids ;
+		      }
+
+
+	
+// Pas besoin du set ici ! 
+
+	/*****************************    Accesseurs    ***********************************************/
+	public String getNom ( ) {
+			return this.nom ;
+		}
+
+	public int getAge ( ) {
+	     return this.age ;
+	   }
+	public double getTaille ( ) {
+	     return this.taille ;
+	   }
+	public double getPoids ( ) {
+	     return this.poids ;
+	   }
+	
+	
+	
+	/*******************Mutateurs******************************************/
+		  
+		public void setAge ( int age ){
+		    this.age = age ;
+		  }
+		  
+		  public void setTaille ( double taille ){
+		    this.taille = taille ;
+		  }
+		 
+		  
+		  // De meme pour le poids
+		 public void setPoids ( double poids ){
+		    this.poids = poids ;
+		  }
+		 
+		  
+/**	   
+La méthode toString est définie dans la classe Object ; 
+ en conséquence toutes les classes Java en hérite.
+ La méthode toString définie dans la classe Object ne fait pas grand-chose :
+elle renvoie le nom de la classe de l'objet concerné suivi de l'adresse de cet objet. 
+Lorsqu'on définit une classe, il peut être très utile de redéfinir la méthode toString afin 
+de donner une description satisfaisante des objets de cette classe
+*/  
+		  
+		  
+		  public String toString(){
+		        String description = "nom de la personne : " + this.nom +"\nage  : " + this.age + "\ntaille : " +
+		                 this.taille +"\npoids :"+this.poids;
+		           return description;
+		   }
+
+
+		   public boolean Adult(){
+		       if(this.age>=18)
+		            return true;
+		       else
+		            return false;
+		   }
+
+		  
+		   public double determineIMC(){
+		    return this.poids/(this.taille*this.taille);
+		   }
+
+		   public String significationIMC(){
+		         String signification;
+		         if(determineIMC()<18.5)
+		              signification=" Vous êtes maigre";
+		         
+		         else if (determineIMC()<25)
+		              signification="Vous êtes normal !  ";
+		         
+		         else if (determineIMC()<30)
+		              signification=" Vous êtes en surpoids";
+		         
+		         else
+		             signification=" Vous êtes obèse";
+		       
+		        return signification;
+		   }
+		}

@@ -1,0 +1,12 @@
+/* 
+ * Résultat temps d'éxécution programme en C : 
+ * real	0m0,357s
+ * user	0m0,114s
+ * sys	0m0,012s
+ */
+
+
+public class Pascal {
+	int tab[] = {};
+	unsigned int n, i;
+}

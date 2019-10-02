@@ -1,0 +1,17 @@
+package tp4;
+import java.util.Scanner;
+
+public class TestNombre 
+{
+
+
+     
+	public static void main(String[] args) 
+	{
+      Nombre Variable= new Nombre(1);
+      System.out.println(Variable.getInt());
+	}
+	
+}
+
+

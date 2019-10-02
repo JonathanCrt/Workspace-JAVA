@@ -1,0 +1,7 @@
+package fr.upem.tidy;
+
+public abstract class AbstractItem {
+	private final String name;
+	private final Material material;
+	private final int timeToLive;
+}

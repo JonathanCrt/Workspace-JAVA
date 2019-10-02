@@ -1,0 +1,18 @@
+package fr.umlv.rental;
+
+public class Camel extends AbstractVehicle {
+	
+	public Camel(int year) {
+		super(year);
+	}
+
+	@Override
+	public String toString() {
+		return "Camel" + getYear() ;
+	}
+	
+	
+	
+	
+	
+}

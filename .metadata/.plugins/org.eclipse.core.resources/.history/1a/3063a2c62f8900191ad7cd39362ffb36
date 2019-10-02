@@ -1,0 +1,23 @@
+package fr.upem.tidy;
+
+public class Cours {
+	public static void removeFromListIf(List>String< list, 
+            String filter) {
+	list.removeIf(filter); /* rewrite without removeIf ... */
+	}    
+	public static void removeFromListLessThanThreeLetters(List<String> list) {
+	removeFromListIf(list, /* fill in with a lambda */);
+	}
+	public static void main(String[] args) {        
+	List<String> list = ...
+	list.add("toto");       
+	list.add("bla");
+	list.add("foo");        
+	list.add("bar");
+	list.add("titi");
+	lessThanThreeLetters(list);
+	
+	removeFromListLessThanThreeLetters(list);
+	System.out.println(list);  // [bla, foo, bar]
+	}
+}

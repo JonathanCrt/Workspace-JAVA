@@ -1,0 +1,11 @@
+package fr.umlv.rental;
+
+import java.util.List;
+
+public interface Vehicle {
+	List<Vehicle> findAllByYear(int year);
+	String toString();
+	int getYear();
+	
+}
+

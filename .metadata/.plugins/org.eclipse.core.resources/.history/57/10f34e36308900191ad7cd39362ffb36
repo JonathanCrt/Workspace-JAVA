@@ -1,0 +1,32 @@
+package fr.upem.tidy;
+
+import java.util.List;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+public class Cours {
+	public static void removeFromListIf(List<String>list, String filter) {
+		Iterator<String> it  = list.iterator();
+		while(it.hasNext()){
+			String s  = it.next();
+			if(s.equals(filter)){
+				it.remove();
+			}
+		}
+	}    
+	public static void removeFromListLessThanThreeLetters(List<String> list) {
+	removeFromListIf(list, );
+	}
+	public static void main(String[] args) {        
+	List<String> list = ...
+	list.add("toto");       
+	list.add("bla");
+	list.add("foo");        
+	list.add("bar");
+	list.add("titi");
+	lessThanThreeLetters(list);
+	
+	removeFromListLessThanThreeLetters(list);
+	System.out.println(list);  // [bla, foo, bar]
+	}
+}

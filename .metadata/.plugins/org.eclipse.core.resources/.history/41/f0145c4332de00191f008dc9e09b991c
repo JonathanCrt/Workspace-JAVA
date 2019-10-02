@@ -1,0 +1,23 @@
+package fr.umlv.rental;
+
+public abstract class AbstractVehicle {
+	private final int year;
+	
+	public int requirePositiveYear(int year) {
+		if(year < 0) {
+			throw new IllegalArgumentException("year must be positive");
+		}
+		return year;
+	}
+
+	/**
+	 * @param year
+	 */
+	public AbstractVehicle(int year) {
+		super();
+		this.year = this.requirePositiveYear(year);
+	}
+	
+	
+	
+}

@@ -1,0 +1,11 @@
+package fr.umlv.geom;
+
+public class Circle extends Point {
+
+	public Circle(int x, int y) {
+		super(x, y);
+		// TODO Auto-generated constructor stub
+		
+	}
+	
+}

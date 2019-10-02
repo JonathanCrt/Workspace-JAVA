@@ -1,0 +1,32 @@
+package tp10_mlv;
+
+import java.util.List;
+
+public class Exercice3 {
+
+	public static long count3(List<String> lst, String pattern) {
+
+		 return lst.stream()
+		 
+		.filter(x -> x.equals(pattern))
+		.mapToInt(x -> 1)
+		/**
+		 *  La méthode reduce effectue une réduction sur les éléments de ce flux, 
+		 *  en utilisant une fonction d'accumulation associative, et retourne un t optionnel décrivant la valeur réduite, le cas échéant
+		 */
+		
+		.reduce((a, b) -> a + b).getAsInt();
+	}
+	
+	
+	public static void main(String[] args) {
+		/**
+		 * 1) Ici on va utiliser la méthode mapToInt() car elle retourne un objet intStream, tandis que la méthode map() retourne un simple stream.
+		 * 
+		 */
+		
+		List<String> list = List.of("hello", "world", "hello", "lambda");
+		System.out.println(list);
+	    System.out.println(count3(list, "hello"));  // 2
+	}
+}

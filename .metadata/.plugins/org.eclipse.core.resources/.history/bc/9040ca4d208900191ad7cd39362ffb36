@@ -1,0 +1,15 @@
+-- Exercice 1 --
+
+	Oui ceci est très important de manière à ce que "n'importe qui" n'accède pas au champ en dehors de la classe.
+	Cela permet d'encapsuler et de ganratir l'intégrité des données.
+
+
+-- Exercice 2 -- 
+
+	Ceci permet de faire de la surchage
+	Car le compilateur ne saura pas les distinguer ! Les méthodes setont dites ambigues.
+
+-- Exercice 3 -- 
+
+
+-- Exercice 4 -- 

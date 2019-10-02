@@ -1,0 +1,56 @@
+package fr.upem.tidy;
+
+import java.util.Objects;
+
+public class ClothingItem {
+	private final String name;
+	private final Size size;
+	private final Material material;
+	private final int timeToLive;
+	
+	
+	public int requirePositiveTTL(int timeToLive) {
+		if(timeToLive < 0) {
+			throw new IllegalArgumentException("TTL must be positive");
+		}
+		return timeToLive;
+	}
+
+	/**
+	 * @param name
+	 * @param size
+	 * @param material
+	 * @param timeToLive
+	 */
+	public ClothingItem(String name, Size size, Material material, int timeToLive) {
+		super();
+		this.name = Objects.requireNonNull(name, "name not be null");
+		this.size = Objects.requireNonNull(size, "size not be null");
+		this.material = Objects.requireNonNull(material, "material not be null");
+		this.timeToLive = this.requirePositiveTTL(timeToLive);
+	}
+	
+	
+	
+	
+	public String getName() {
+		return name;
+	}
+
+	public Size getSize() {
+		return size;
+	}
+
+	public Material getMaterial() {
+		return material;
+	}
+
+	public int getTimeToLive() {
+		return timeToLive;
+	}
+	
+	
+	
+	
+	
+}

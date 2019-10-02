@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Exercice3.java&apos; to &apos;TP1-MLV/src/tp1_mlv&apos;&#x0D;&#x0A;- Original project: &apos;TP2-MLV&apos;&#x0D;&#x0A;- Destination element: &apos;TP1-MLV/src/tp1_mlv&apos;&#x0D;&#x0A;- Original element: &apos;tp2_mlv.Exercice3.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=TP1-MLV/src&lt;tp1_mlv" element1="/src&lt;tp2_mlv{Exercice3.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1551207195882" units="1" version="1.0"/>
+</session>

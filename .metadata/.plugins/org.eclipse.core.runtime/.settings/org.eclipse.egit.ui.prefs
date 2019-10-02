@@ -1,0 +1,3 @@
+always_use_staging_view=false
+auto_stage_on_commit=false
+eclipse.preferences.version=1

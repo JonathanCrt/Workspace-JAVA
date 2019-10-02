@@ -1,0 +1,5 @@
+package fr.umlv.rental;
+
+public abstract class AbstractVehicle {
+
+}

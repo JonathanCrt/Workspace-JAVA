@@ -1,0 +1,38 @@
+package fr.umlv.rental;
+
+import fr.upem.tidy.AbstractItem;
+
+public abstract class AbstractVehicle {
+	private final int year;
+	
+	public int requirePositiveYear(int year) {
+		if(year < 0) {
+			throw new IllegalArgumentException("year must be positive");
+		}
+		return year;
+	}
+
+	/**
+	 * @param year
+	 */
+	public AbstractVehicle(int year) {
+		super();
+		this.year = this.requirePositiveYear(year);
+	}
+	
+	
+	@Override 
+	public boolean equals(Object o) {
+		if(!(o instanceof AbstractVehicle)) {
+			return false;
+		}
+		AbstractVehicle abs = (AbstractVehicle)o;
+		return  year == abs.year ;
+	}
+	
+	@Override
+	public int hashCode() {
+		return  year;
+	}
+	
+}

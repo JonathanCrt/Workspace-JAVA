@@ -1,0 +1,28 @@
+package td1_concurrence;
+
+public class HelloThread {
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+		
+		Runnable runnable = () -> {
+			
+			int i ;
+			for(i = 0; i < 5000; i++) {
+				System.out.println(i);
+			}
+			
+		};
+		
+		
+		/**
+		 * Un Runnable sert à transferer du code
+		 */
+	}
+}

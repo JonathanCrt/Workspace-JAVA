@@ -1,0 +1,62 @@
+package tp10_mlv;
+import java.util.List;
+
+
+public class Exercice1 {
+	
+	/**
+	 * count the number of occurrences of a word in a list
+	 * @param lst
+	 * @param pattern
+	 * @return
+	 */
+	public static long count (List<String> lst, String pattern) {
+		
+		long cpt = 0;
+		for(String st : lst) {
+			if(st.equals(pattern)) {
+			//if(st.contains(pattern)) {
+				cpt++;
+			}
+		}
+		return cpt;
+	
+	}
+	
+	/**
+	 * count the number of occurrences of a word in a list
+	 * @param lst
+	 * @param pattern
+	 * @return
+	 */
+	public static long count2(List<String> lst, String pattern) {
+
+		 return lst.stream()
+				 
+		.filter(x -> x.equals(pattern))
+		.count();
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		List<String> list = List.of("hello", "world", "hello", "lambda");
+		System.out.println(list);
+	    System.out.println(count(list, "hello"));  // 2
+	    System.out.println(count2(list, "hello"));  // 2
+	    
+	    /**
+	     * 2) On appelle la méthode stream sur l'objet de type List
+	     * Pour filtrer un stream on utilise la méthode filter(Predicate<? super String> predicate) qui retourne
+	     * un stream composé des éléments de ce stream qui correspondent au prédicat donné.
+	     * Pour compter le nombre d'élements on utilise la méthode count().
+	     * Dans notre cas le type correspondant à T est un String.
+	     * 
+	     * Appeller la méthode stream() sur l'objet de type list
+	     * Appeler la méthode filter()
+	     * Ecrire le prédicat qui est une lambda expression.
+	     * Appeler la méthode count() pour compter et retourner  le nombre d'eléments dans le stream.
+	     */
+	    
+	}
+}

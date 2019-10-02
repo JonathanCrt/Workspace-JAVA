@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="729"/>
+		<item key="DIALOG_Y_ORIGIN" value="403"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="FindACarByModel"/>
+		<item key="casesensitive" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="wrap" value="true"/>
+		<item key="wholeword" value="false"/>
+		<list key="findhistory">
+			<item value="findACarByModel"/>
+			<item value="Weapon"/>
+			<item value="getBlue"/>
+			<item value="break"/>
+			<item value="inde"/>
+			<item value="indexOf"/>
+			<item value="contains("/>
+			<item value="contains"/>
+			<item value="handCards"/>
+			<item value="tips"/>
+			<item value="endGame"/>
+			<item value="lastAction"/>
+			<item value="act"/>
+			<item value="score"/>
+			<item value="getLeftCards()"/>
+		</list>
+		<list key="replacehistory">
+			<item value="Car"/>
+			<item value="attackTarget"/>
+			<item value="defenseAttacker"/>
+			<item value="defenseTarget"/>
+			<item value="attackAttacker"/>
+			<item value="e"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_WIDTH" value="284"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_X_ORIGIN" value="1366"/>
+		<item key="DIALOG_Y_ORIGIN" value="483"/>
+	</section>
+</section>

@@ -1,0 +1,22 @@
+package fr.upem.tidy;
+
+public abstract class AbstractItem {
+	private final String name;
+	private final Material material;
+	private final int timeToLive;
+	
+	/**
+	 * @param name
+	 * @param material
+	 * @param timeToLive
+	 */
+	public AbstractItem(String name, Material material, int timeToLive) {
+		super();
+		this.name = name;
+		this.material = material;
+		this.timeToLive = timeToLive;
+	}
+	
+	
+	
+}

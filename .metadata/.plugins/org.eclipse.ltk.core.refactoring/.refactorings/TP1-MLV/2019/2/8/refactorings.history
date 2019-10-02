@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Morse.java&apos; to &apos;TP2-MLV/src/fr.umlv.morse&apos;&#x0D;&#x0A;- Original project: &apos;TP1-MLV&apos;&#x0D;&#x0A;- Destination element: &apos;TP2-MLV/src/fr.umlv.morse&apos;&#x0D;&#x0A;- Original element: &apos;tp1_mlv.Morse.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=TP2-MLV/src&lt;fr.umlv.morse" element1="/src&lt;tp1_mlv{Morse.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1550934088456" units="1" version="1.0"/>
+</session>

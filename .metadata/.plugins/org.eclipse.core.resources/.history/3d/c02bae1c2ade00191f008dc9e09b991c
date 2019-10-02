@@ -1,0 +1,31 @@
+package fr.umlv.rental;
+
+public class Main {
+	public static void main(String[] args) {
+		Car mustang = new Car("ford mustang", 2014);
+		Car ds4 = new Car("citroen ds4", 2016);
+
+		System.out.println(mustang);
+		
+		CarRental cars = new CarRental();
+		
+		cars.add(mustang);
+		cars.add(ds4);
+		System.out.println(cars.toString());
+
+		
+		/**
+		 * 6) 
+		 * Interface stream --> L'interface Stream est une séquence d’éléments sur 
+		 * qui nous permet d'effectuer un groupe d’opérations de manière séquentielle ou parallèle.
+		 *  Pour obtenir un stream à partir d'une liste --> on appelle la méthode stream sur l'objet de type List.
+		 *  
+		 * filter(Predicate<? super String> predicate) --> Cette méthode nous permet de filtrer un stream,   
+		 * en retournant un stream composé des éléments de ce stream qui correspondent au prédicat donné.
+		 * map()     --> la méthode map() va prendre en argument une lambda appelant sur un x la méthode donnée. 
+	     * map() nous permet de modifier directement ce que nous venons de récupérer.
+		 * collect() --> 
+		 */
+		
+	}
+}

@@ -1,0 +1,17 @@
+package fr.umlv.fight;
+
+import java.util.Random;
+
+public class Fighter extends Robot {
+	
+	
+	
+	
+	
+	public Fighter(String nom) {
+		super(nom);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}
