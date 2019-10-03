@@ -1,0 +1,43 @@
+Exercice 0 
+
+Les valeurs obtenues sont toutes différentes et supérieures
+à 10_000
+
+En mémoire, le champ value vaut 10000
+
+
+Exemple : 
+Supposons que value vaut 1 et que t1 et t2 vont éxécuter value++
+Si t1 lit la valeur de value(1) et est déschédulé.
+t2 lit la valeur de value(1), l'incrémente  en mémoire. Donc  value vaut 2.
+Le thread est déschedulé, il incrémente la valeur 2 et l'écrit en mémoire (2).
+
+---
+
+1) La valeur de value est 0. La thread 1 lit cette valeur et il est déschedulé. Le thread2 est schédulé et 
+il termine son runnable. Donc la valeur de value 10000 
+Le thread t1 est reschedulé et il vaut la valeur 1. 
+Puis il termine son runnable et à la fin value vaut 10000.
+
+Pourquoi  pas moins de 10 000 ? à rédiger
+
+Up
+Up
+Up
+Trying to table
+Up
+Up
+
+
+
+Exercice 1
+Arréter le thread à la main.
+data-race = zone mémoire partagée par deux thread -> st.stop
+Le main et le thread essaie d'écrire le stop.La valeur de stop ne change pas dans la boucle 
+println (E/S) est une opération lente. Le JIT attend un certain nombre de boucles pour optimiser (l'optimisation coûte cher)
+donc le thread s'arrêtera.
+il considére la variable stop comme une variable locale (car ni getter et setter).
+
+
+Pas d'optimisation par le JIT quand on a  le println.
+Optimisation dès qu'on à l'instruction println
