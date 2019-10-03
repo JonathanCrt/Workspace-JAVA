@@ -7,25 +7,7 @@ import java.util.stream.Stream;
 
 
 public class Exercice1 {
-	/**
-	 * 1) La classe java.nio.file.Path a été introduite la classe après java.io.File
-	 *  (dans la version 7 de Java). Le package java.nio.file reprend la quasi totalité 
-	 *  des fonctionnalités de java.io.File en tentant de les améliorer. 
-	 *  Par exemple avant les méthodes ne levaient pas d’exception en cas d’erreur, 
-	 *  la fonction de renommage des fichiers étaient instables, on ne pouvait modifier 
-	 *  les permissions des fichiers. La classe java.nio.file.Path est celle qui se rapproche 
-	 *  le plus dans son fonctionnement de java.io.File.
-		java.io.File est destinée à ne plus être utilisée.
-		Il faut mieux utiliser le Path que File à cause de l'encodage.
-		factory : méthode statique qui permet de fabriquer un objet.
-		try/catch -> 
-		7) On utilise un try pour reprendre sur l'erreur, gérer l'exception.
-		Donner une exception plus précise + avoir une Unchecked exception 
-		pour ne pas avoir à la traiter
-		Sinon un throws
-		9) on est garanti que le close est effectué.
-	 */
-	
+
 	public static void main(String[] args) throws IOException {
 		
 		var path = Path.of("data/movies.txt");

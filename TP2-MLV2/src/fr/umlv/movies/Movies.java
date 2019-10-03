@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -24,10 +25,6 @@ public class Movies {
 		displayFirst50Actors(path);
 		System.out.println(countTotalActors(path));
 		
-		/**
-		 * flatMap -> "applatir un stream", ramener à une seule dimension (Liste d'acteurs à acteurs)
-		 * 
-		 */
 	}
 	/**
 	 * 
@@ -111,8 +108,7 @@ public class Movies {
 	 * @param map
 	 * @return long
 	 */
-	public  static long numberOfUniqueActors(Map<String, List<String>> map) {
-	
+	public static long numberOfUniqueActors(Map<String, List<String>> map) {
 		return map.values()
 		.stream()
 		.flatMap(Collection::stream)
@@ -127,16 +123,24 @@ public class Movies {
 	 * @return Map<String, Long>
 	 */
 	public static Map<String, Long> numberOfMoviesByActor(Map<String, List<String>> map) {
-		
 		 return map.values()
 		 .stream()
 		 .flatMap(Collection::stream)
 		 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 	}
 	
-	/*
-	public static Optional<Map<String, List<String>>> actorInMostMovies(Map<String, List<String>> map) {
+	/**
+	 * returns a pair containing the actor who played in the movie over and the number of films in which he played
+	 * @param map
+	 * @return
+	 */
+	public static Optional<Entry<String, Long>> actorInMostMovies(Map<String, Long> map) {
 		
+		return map.entrySet()
+				.stream()
+				.collect(Collectors.maxBy((x1, x2) -> {
+					return x1.getValue().compareTo(x2.getValue());
+				}));
 	}
-	*/
+	
 }

@@ -55,7 +55,7 @@ public class MoviesTest {
 	}
 	
 	
-	/*
+	
 	@Test
 	public void actorInMostMovies() throws IOException {
 		var path = Path.of("data/movies.txt");
@@ -68,5 +68,5 @@ public class MoviesTest {
 		  () ->assertEquals(92, actorInMostMovies.getValue())
 		  );
 	}
-	*/
+	
 }
