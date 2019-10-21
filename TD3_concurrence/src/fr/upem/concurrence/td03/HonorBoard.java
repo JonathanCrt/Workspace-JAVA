@@ -32,16 +32,6 @@ public class HonorBoard {
 	  
 	  public static void main(String[] args) {
 		  
-		/**
-		 * La classe n'est pas thread-safe car les méthodes  toString() et set() ne sont pas synchronized
-		 * Un thread peut être déschulé en plein milieu du set  
-		 * trois threads -> data-race sur les champs firstname et lastname
-		 * alternance des prenoms/noms (combinaisons) -> 
-		 *  -- t1 set le champ le prénom et nom, il est déschédulé  : John Doe
-		 *  -- t2 set le prénom puis il est déschédulé              : Jane Doe
-		 *  -- t3  affiche Jane Doe
-		 */
-		
 	    HonorBoard board = new HonorBoard();
 	    new Thread(() -> {
 	      for(;;) {

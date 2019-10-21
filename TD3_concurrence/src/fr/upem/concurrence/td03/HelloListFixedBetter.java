@@ -8,7 +8,7 @@ public class HelloListFixedBetter {
 	    var nbThreads = 4;
 	    var threads = new Thread[nbThreads]; 
 	    var list = new ThreadSafeList();
-
+	    
 	    IntStream.range(0, nbThreads).forEach(j -> {
 	      Runnable runnable = () -> {
 	    		for (var i = 0; i < 5000; i++) {

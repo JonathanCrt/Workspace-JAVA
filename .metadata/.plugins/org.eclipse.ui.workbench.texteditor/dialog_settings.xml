@@ -6,12 +6,16 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="FindACarByModel"/>
+		<item key="selection" value="add"/>
 		<item key="casesensitive" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="wholeword" value="false"/>
 		<list key="findhistory">
+			<item value="add"/>
+			<item value="grow"/>
+			<item value="counter"/>
+			<item value="table"/>
 			<item value="findACarByModel"/>
 			<item value="Weapon"/>
 			<item value="getBlue"/>
@@ -23,12 +27,10 @@
 			<item value="handCards"/>
 			<item value="tips"/>
 			<item value="endGame"/>
-			<item value="lastAction"/>
-			<item value="act"/>
-			<item value="score"/>
-			<item value="getLeftCards()"/>
 		</list>
 		<list key="replacehistory">
+			<item value="size"/>
+			<item value="hashSet"/>
 			<item value="Car"/>
 			<item value="attackTarget"/>
 			<item value="defenseAttacker"/>

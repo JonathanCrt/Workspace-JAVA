@@ -16,7 +16,7 @@ public class FindPrime {
 
   public static void main(String[] args) throws InterruptedException {
     var nbThreads = 4;
-    var rdv = new StupidRendezVous<Long>();
+    var rdv = new RendezVous<Long>();
     for (var i = 0; i < nbThreads; i++) {
       var fi = i;
       var thread = new Thread(() -> {
@@ -35,17 +35,6 @@ public class FindPrime {
     }
     Long prime = rdv.get();
     System.out.println("I found a large prime number : " + prime);
-    
-    
-    /*
-     * data-race sur le champ value
-     * L'exécution est longue. 4 threads qui recherche un nombre premier
-     * 
-     * 
-     */
-    
-    
-    
     
   }
 }
