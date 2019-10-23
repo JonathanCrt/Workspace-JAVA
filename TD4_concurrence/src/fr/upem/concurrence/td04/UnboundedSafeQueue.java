@@ -19,11 +19,8 @@ public class UnboundedSafeQueue<V> {
 	}
 	
 	/**
-	 * 
-	 * 
-	 * 
-	 * 
-	 * @return
+	 * remove first element and return it
+	 * @return V type of element
 	 * @throws InterruptedException 
 	 */
 	public V take() throws InterruptedException {
