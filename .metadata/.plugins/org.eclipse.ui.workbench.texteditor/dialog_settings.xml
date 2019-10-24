@@ -6,12 +6,14 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="add"/>
+		<item key="selection" value="size"/>
 		<item key="casesensitive" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="wholeword" value="false"/>
 		<list key="findhistory">
+			<item value="nbOfElements"/>
+			<item value="Ã©"/>
 			<item value="add"/>
 			<item value="grow"/>
 			<item value="counter"/>
@@ -25,18 +27,16 @@
 			<item value="contains("/>
 			<item value="contains"/>
 			<item value="handCards"/>
-			<item value="tips"/>
-			<item value="endGame"/>
 		</list>
 		<list key="replacehistory">
 			<item value="size"/>
+			<item value="e"/>
 			<item value="hashSet"/>
 			<item value="Car"/>
 			<item value="attackTarget"/>
 			<item value="defenseAttacker"/>
 			<item value="defenseTarget"/>
 			<item value="attackAttacker"/>
-			<item value="e"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

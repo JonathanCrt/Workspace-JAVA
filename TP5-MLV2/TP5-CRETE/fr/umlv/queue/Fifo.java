@@ -1,6 +1,5 @@
 package fr.umlv.queue;
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.Objects;
@@ -119,29 +118,14 @@ public class Fifo <E>  implements Iterable<E>{
 		}
 		
 		public static void main(String[] args) {
-			/**
-			 * 1 - Pour détecter si la fifo est vide ou pleine, on peut mettre le premier indice à -1. 
-			 * Utiliser un compteur qui compte les elements dans la file
-			 * 
-			 * 3 - En testtant si la taille de la fifo n'est pas égale à la taille maximale etant à la capacity à l'initialisation
-			 * 	Si la fifo est pleine , on lève une IlegalStateException
-			 *
-			 * 6 - memory leak -> fuite de memoire  
-			 * ans un programme qui alloue régulièrement de nouveaux objets en mémoire, la cause la plus classique d'un tel bogue est l'absence de désallocation 
-			 * (de libération) de l'espace utilisé lorsque ces objets ne sont plus référencés.  (wikipedia)
-			 * 
-			 * 8 - -- Utilisation d'un iterateur -- 
-			 * 	  for(Iterator<MyObject> iter = myList.iterator(); iter.hasNext();) {
-			 *	    MyObject element = iter.next();
-			 *	    // To do...
-			 *	  }
-			 * 	  On peut utiliser un iterateur sur une structure de donnee des que l'on souhaite modifier 
-			 *    ou supprimer des elements de celle-ci
-			 * 	  Relativement perfomant, un iterateur est assez souple, et peut nous permettre d'utiliser plusieurs conditions d'arrets
-			 *    et d'effectuer plusieurs pas d'un coup.
-			 * 
-			 *    Un iterateur doit retourner un E
-			 *    Etat dans le parcoyrs de la Collection
-			 */
+			var list = new Fifo<Integer>(5);
+			list.offer(15);
+			list.offer(48);
+			list.offer(17);
+			
+			for(var elt : list) { //use of iterator
+				System.out.println(elt);
+			}
+			
 		}
 }

@@ -5,7 +5,9 @@ import java.util.Objects;
 
 public class Vote {
 	private final HashMap<String, Integer> map;
-	//private final int nbVotes;
+	private final Object lock = new Object();
+	private int size;
+	private  int nbVotes;
 	
 	/**
 	 * @param map
@@ -13,26 +15,37 @@ public class Vote {
 	 */
 	public Vote(int nbVotes) {
 		this.map = new HashMap<>();
-		//this.nbVotes = Objects.requireNonNull(nbVotes);
+		this.nbVotes = Objects.requireNonNull(nbVotes);
+		this.size = 0;
 	}
 
 	/**
 	 * proposed a vote and blocks until the No votes arrived. Then it returns the winner
 	 * @param st
 	 * @return
+	 * @throws InterruptedException 
 	 */
-	public String vote(String st) {
-		Objects.requireNonNull(st);
-		// key -> voter / Value -> nbVotes 
-		map.compute(st, (voter, nbVotes) -> {
-			if(nbVotes == null) {
-				return 1;
+	public String vote(String bullet) throws InterruptedException {
+		Objects.requireNonNull(bullet);
+		
+		synchronized (lock) {
+			// key -> voter / Value -> nbVotes 
+			if(nbVotes > 0) {
+				map.compute(bullet, (voter, nbVotes) -> {
+					if(nbVotes == null) {
+						return 1;
+					}
+					else {
+						return (nbVotes + 1);
+					}
+				});
+				this.nbVotes--;
 			}
-			else {
-				return (nbVotes + 1);
+			while(nbVotes > 0) {
+				lock.wait();
 			}
-		});
-	
+			lock.notifyAll();
+		}
 		return this.computeWinner();
 	}
 	
@@ -54,7 +67,7 @@ public class Vote {
 	    return currentWinner;
 	  }	
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		Vote vote = new Vote(3);
 	    new Thread(
 	            () -> {
