@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;TP9-MV&apos;" deleteContents="false" description="Delete resource &apos;TP9-MV&apos;" element1="/TP9-MV" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1558958726877"/>
-</session>

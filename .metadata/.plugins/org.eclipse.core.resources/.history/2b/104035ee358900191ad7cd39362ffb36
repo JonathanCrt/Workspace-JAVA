@@ -1,8 +1,0 @@
-package fr.upem.tidy;
-
-public class Accessory extends AbstractItem {
-	private final boolean useful;
-	
-	
-	
-}

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename Java project &apos;td1_concurrence&apos; to &apos;TD1_concurrence&apos;&#x0D;&#x0A;- Original element: &apos;td1_concurrence&apos;&#x0D;&#x0A;- Renamed element: &apos;td1_concurrence&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;td1_concurrence&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=td1_concurrence" name="TD1_concurrence" references="true" stamp="1569516004984" version="1.0"/>
-</session>

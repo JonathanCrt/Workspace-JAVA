@@ -1,5 +1,0 @@
-package fr.upem.tidy;
-
-abstract class AbstractItem {
-	
-}

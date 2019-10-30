@@ -1,9 +1,0 @@
-package fr.umlv.geom;
-
-public class Main {
-	public static void main(String[] args) {
-		/* 1) Le code de la classe Point ne compile pas car dans la méthode translate(int x, int y) 
-		 * on cherche à effectuer dans opérations sur les champs x et y qui sont "finaux" (mot clé final)
-		 *  */
-	}
-}
