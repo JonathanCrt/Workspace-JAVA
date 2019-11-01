@@ -13,7 +13,10 @@ public class Point {
 	}
 
 	public boolean isOrigin() {
-		return x == 0 && y == 0;
+		synchronized (lock) {
+			return x == 0 && y == 0;
+		}
+		
 	}
 
 	public void addX(int dx) {
