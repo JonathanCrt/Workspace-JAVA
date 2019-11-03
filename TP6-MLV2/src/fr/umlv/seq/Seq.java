@@ -123,8 +123,8 @@ public class Seq <E> implements Iterable<E>{
 		if (seq.isEmpty()) {
 			return Optional.empty();
 		}
-		var mappedElt = myFunction.apply(seq.get(0));
-		return (Optional<E>) Optional.of(mappedElt);
+		var mappedElement = myFunction.apply(seq.get(0));
+		return (Optional<E>) Optional.of(mappedElement);
 	}
 	
 	
