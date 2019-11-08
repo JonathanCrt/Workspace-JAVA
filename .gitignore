@@ -1,6 +1,6 @@
-.metadata
-bin/
-tmp/
+**/.metadata
+**/bin/
+**/tmp/
 *.tmp
 *.bak
 *.swp
@@ -8,4 +8,5 @@ tmp/
 local.properties
 .settings/
 .loadpath
-.recommenders
+.recommenders/
+.idea/
