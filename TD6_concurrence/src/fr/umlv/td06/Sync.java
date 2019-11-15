@@ -12,14 +12,8 @@ public class Sync<V> {
 	 * @return
 	 */
 	public boolean inSafe() {
-		synchronized (lock) { // assurer la lecture en mémoire
+		synchronized (lock) { // assurer la lecture en memoire
 			return isExecuting;
-			/*
-			if(!isExecuting) {
-				return false;
-			}
-			return true;
-			*/
 		}
 	}
 	  
@@ -39,7 +33,7 @@ public class Sync<V> {
 		}
 		
 	    try {
-	    	return supplier.get(); // il n'y a pas de barrière mémoire
+	    	return supplier.get(); // subtilite : il n'y a pas de barriere memoire
 		} finally {
 			synchronized (lock) {
 				isExecuting = false;

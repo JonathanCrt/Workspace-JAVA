@@ -94,7 +94,7 @@ public class ContainerTest {
   
   
   // Q2
-  /*
+  
   @Test
   public void testContainsSimple() {
     Container<String> c = new Container<>(s -> s.length());
@@ -123,6 +123,7 @@ public class ContainerTest {
     Container<Object> c = new Container<>(__ -> -1);
     c.contains(new Object());
   }
+  
   
   
   // Q3
@@ -176,6 +177,7 @@ public class ContainerTest {
     Container<Integer> c = new Container<>(x -> x);
     assertEquals("{}", c.toString());
   }
+  
   
   // Q5
   
@@ -240,7 +242,7 @@ public class ContainerTest {
     }
   }
   
-  
+  /*
   // Q6
   
   @Test

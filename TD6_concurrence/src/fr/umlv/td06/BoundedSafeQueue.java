@@ -58,8 +58,8 @@ public class BoundedSafeQueue<V> {
 	  
 	  
 	  /*
-	   * --> Il faut réveiller tous les threads bloqué par les deux& conditions await()
-	   * On utilise deux conditions. On nomme la condition en conséquence.
+	   * --> Il faut reveiller tous les threads bloque par les deux & conditions await()
+	   * On utilise deux conditions. On nomme la condition en consequence.
 	   * 
 	   */
 	  

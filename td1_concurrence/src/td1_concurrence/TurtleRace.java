@@ -1,4 +1,4 @@
-package td1_concurrence;
+package TD1_concurrence;
 
 public class TurtleRace {
 	public static void main(String[] args) throws InterruptedException {
