@@ -20,7 +20,7 @@ public class Fastest {
 	}
 	
 	/**
-	 * 
+	 * create a request
 	 * @param site
 	 */
 	private void createRequest(String site) {
@@ -56,11 +56,12 @@ public class Fastest {
 			}
 			
 			int nbAnswer = 0;
-			while(nbAnswer < Request.ALL_SITES.size()) { // dés que je trouve une réponse ok 
+			while(nbAnswer < Request.ALL_SITES.size()) { // des que je trouve une reponse ok 
 				var answer = blockingQueue.take();
 				if(answer.isSuccessful()) {
 					return Optional.of(answer);
 				}
+				nbAnswer++;
 			}
 			
 			return Optional.empty();
@@ -74,6 +75,6 @@ public class Fastest {
 		
 		var agregator = new Fastest("tortank", 2_000);
 		var answer = agregator.retrieve();
-		System.out.println(answer); // Optional[tortank@amazon.fr : 796]
+		System.out.println(answer); // Optional[tortank@amazon.fr : 427]
 	}
 }
