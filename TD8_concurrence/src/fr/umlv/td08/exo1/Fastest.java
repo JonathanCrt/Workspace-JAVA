@@ -1,8 +1,11 @@
-package fr.umlv.td08;
+package fr.umlv.td08.exo1;
 
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.concurrent.ArrayBlockingQueue;
+
+import fr.umlv.td08.Answer;
+import fr.umlv.td08.Request;
 
 public class Fastest {
 	

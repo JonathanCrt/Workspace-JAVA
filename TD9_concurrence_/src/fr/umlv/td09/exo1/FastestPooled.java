@@ -1,10 +1,13 @@
-package fr.umlv.td09;
+package fr.umlv.td09.exo1;
 
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
+
+import fr.umlv.td09.Answer;
+import fr.umlv.td09.Request;
 
 public class FastestPooled{
 	

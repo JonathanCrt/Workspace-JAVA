@@ -1,9 +1,11 @@
-package fr.umlv.td09;
+package fr.umlv.td09.exo2;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CancellationException;
+
+import fr.umlv.td09.Answer;
 
 public class RequestWithCancel {
 
