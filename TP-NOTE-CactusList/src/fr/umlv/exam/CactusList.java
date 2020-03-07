@@ -1,99 +1,92 @@
 package fr.umlv.exam;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.NoSuchElementException;
+import java.util.List;
 import java.util.Objects;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
-public class CactusList<E> implements Iterable {
-    //private Object[] list;
-    private E[] list;
-    private int counter;
-    private static int INIT_SIZE = 200;
-    private int index;
-    private boolean isFrozen;
+public class CactusList<E> implements Iterable<E> {
+	private ArrayList<E> list;
+	private boolean isFrozen;
+	//private boolean isNormalized;
 
-    public CactusList() {
-        this.list = (E[]) new Object[INIT_SIZE];
-        this.counter = 0;
-        this.index = 0;
-    }
+	public CactusList() {
+		this.list = new ArrayList<E>();
+	}
 
-    public void add(E element) {
-        Objects.requireNonNull(element);
-        /*
-        if (!(element instanceof ) ) {
-            throw new IllegalArgumentException();
-        }
-         */
-        while (listShouldBeGrow()) { // Mais attention a la m√©moire
-            this.growCactusList();
-        }
+	private void checkIfListIsFrozen() throws IllegalStateException {
+		if (this.isFrozen) {
+			throw new IllegalStateException();
+		}
+	}
 
-        list[index] = element;
-        this.index++;
-        this.counter++;
-    }
+	private void addLogic(E element) throws IllegalArgumentException {
+		Objects.requireNonNull(element);
 
-    public void addCactus(CactusList<? extends E> cactusList) {
-        Objects.requireNonNull(cactusList);
+		if (element instanceof CactusList) {
+			throw new IllegalArgumentException();
+		}
+		this.checkIfListIsFrozen();
 
+		list.add(element);
 
-        for (var elt : cactusList) {
-            while (listShouldBeGrow()) { // Mais attention a la m√©moire
-                this.growCactusList();
-            }
-            list[index] = (E) elt;
-            this.index++;
-            this.counter++;
-        }
+	}
 
+	public void add(E element) {
+		this.addLogic(element);
+	}
 
-    }
+	public void addCactus(CactusList<? extends E> cactusList) {
+		Objects.requireNonNull(cactusList);
 
-    private boolean listShouldBeGrow() {
-        return (this.list.length / 2) < this.index;
-    }
+		cactusList.isFrozen = true;
+		this.checkIfListIsFrozen();
 
-    private void growCactusList() {
-        var newLength = this.list.length * 2;
-        this.list = Arrays.copyOf(list, newLength);
-    }
+		for (var elt : cactusList) {
+			this.add(elt);
+		}
 
-    public int size() {
-        return this.counter;
-    }
+	}
 
-    @Override
-    public Iterator iterator() {
-        return new Iterator<E>() {
+	public int size() {
+		return this.list.size();
+	}
 
-            private int cursor = this.nextToReturn(0);
+	@Override
+	public Iterator<E> iterator() {
+		return list.iterator();
+	}
 
-            private int nextToReturn(int from) {
-                for (var firstElt = from; firstElt < list.length; firstElt++) {
-                    if (list[firstElt] != null) {
-                        return firstElt;
-                    }
-                }
-                return -1; // -1 si plus personne
-            }
+	public void forEach(Consumer<? super E> consumer) {
+		this.list.forEach(consumer);
+	}
 
-            @Override
-            public boolean hasNext() {
-                return cursor != -1;
-            }
+	public boolean frozen() {
+		return isFrozen;
+	}
 
-            @Override
-            public E next() {
-                if (!this.hasNext()) {
-                    throw new NoSuchElementException();
-                }
-                var tmp = cursor;
-                cursor = this.nextToReturn(cursor + 1);
-                return list[tmp];
+	@Override
+	public String toString() {
+		return list.stream().map(E::toString).collect(Collectors.joining(", ", "<", ">")).toString();
+	}
 
-            }
-        };
-    }
+	// Pas accÈs ‡ E dans le static
+	public static <T> CactusList<T> from(List<T> list) {
+		var cactusList = new CactusList<T>();
+		for (var elt : list) {
+			cactusList.add(elt);
+		}
+		cactusList.isFrozen = true;
+		return cactusList;
+	}
+	
+	/*
+	public E get(int index) {
+		this.list.stream()
+		.flatMap()
+	}
+	*/
+
 }

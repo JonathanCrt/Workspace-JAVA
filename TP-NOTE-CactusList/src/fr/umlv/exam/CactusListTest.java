@@ -88,8 +88,7 @@ public class CactusListTest {
         assertEquals(1, CactusList.class.getConstructors().length);
     }
 
-
-    /*
+   
     @Test @Tag("Q1")
     public void testCactusListContract() {
         var cactus = new CactusList<>();
@@ -102,9 +101,9 @@ public class CactusListTest {
         );
     }
 
-
+	
     // Q2
-    */
+    
     @Test @Tag("Q2")
     public void testCactusListNotFrozenByDefault() {
         var cactus = new CactusList<String>();
@@ -146,7 +145,7 @@ public class CactusListTest {
 
 
     // Q3
-    /*
+    
     @Test @Tag("Q3")
     public void testCactusListOfIntegerForEach() {
         var cactus = new CactusList<Integer>();
@@ -234,7 +233,7 @@ public class CactusListTest {
 
 
     // Q4
-
+    
     @Test @Tag("Q4")
     public void testCactusListToString() {
         var cactus = new CactusList<Integer>();
@@ -287,7 +286,7 @@ public class CactusListTest {
 
 
     // Q5
-
+    
     @Test @Tag("Q5")
     public void testCactusListFromIntegers() {
         CactusList<Integer> cactus = CactusList.from(List.of(1, 89, 77));
@@ -367,7 +366,7 @@ public class CactusListTest {
 
 
     // Q6
-
+    /*
     @Test @Tag("Q6")
     public void testCactusListGet() {
         var cactus = new CactusList<String>();
